@@ -25,32 +25,40 @@ products = [
 
 # TODO: write some Python code here to produce the desired functionality...
 
+#selected_id=input("Please input a product identifier: ") #> "9" is string version
+#print(selected_id)
+#print(type(selected_id))
+
+#selected_id = input("Please input a product identifier: ")
+#matching_product = [p for p in products if p["id"] == selected_id]
+#print(matching_product)
+#print(type(matching_product))
+
+#todo multiple times--use while loop--must indent along with loop--NEED DONE AS WELL
+
+
+#CONDITIONALLY DETECT DONE
 total_price = 0 
 
 tax_rate = .06
 
 selected_ids = []
 
-#USER INPUTS
-
 while True:
+    selected_id = input("Please input a product identifier: ")
 
-    selected_id=input("Please input a product identifier: ") #> "9" is string version
-    #Create "DONE" option
     if selected_id == "DONE":
             break
     else:
-        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        # matching_product = matching_products[0] 
-        # total_price = total_price + matching_product["price"]
-        # print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
+        #matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        #matching_product = matching_products[0] #why is this zero--would it affect if you were to take out id#4?
+        #total_price = total_price + matching_product["price"]
+        #print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
+        #^ABOVE WAS LOOKUP APPROACH
         selected_ids.append(selected_id)
 
-#first step
-# print(selected_id)
-# print(type(selected_id))
+#INFO DISPLAY
 
-#INFO DISPLAY/OUTPUT
 import datetime
 t = datetime.datetime.now()
 print(t.strftime("%y-%m-%d"))
@@ -62,10 +70,9 @@ print("Checkout at :" + str(t)) #STILL NEED TO FORMAT****************
 print("---------------------------------------------")
 print(selected_ids)#******GET LIST OF PRODUCTS BELOW TO HAVE "SELECTED PRODUCTS" AND THEN ...+...+
 
-
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-    matching_product = matching_products[0]
+    matching_product = matching_products[0] #why is this zero--would it affect if you were to take out id#4?
     total_price = total_price + matching_product["price"]
     print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
 
@@ -75,8 +82,64 @@ final_price = total_price + tax_price
 print("SUBTOTAL: $" + str(total_price))
 print("TAX: $" + str(tax_price)) #calculate taX--HOW TO PUT IN THE 6% AS A MEASURE OF TOTAL. THEN ADD THE TAX TO SUBTOTAL
 print("TOTAL: $" + str(final_price))
+print("---------------------------------------------")
+"Thanks for shopping at the Jyve Grocery Store!"
+print("---------------------------------------------")
 
-# previously used: print("TOTAL PRICE: " + str(total_price))
+
+#LIST OF THINGS TO DO
+
+
+
+
+
+
+#APPEND TO ADD ITEMS TO LIST
+
+
+
+
+
+
+
+#
+#
+#
+#
+#
+#
+#
+
+
+
+# TODO: write some Python code here to produce the desired functionality...
+#print(products)
+
+#"DONE" 
+
+#GROCERY STORE NAME
+input()
+
+#GROCERY STORE PHONE NUMBER
+
+#DATE AND TIME OF BEGINNING CHECKOUT PROCESS
+import datetime
+t = datetime.datetime.now()
+print(type(t))
+print(t)
+#strftime("%Y-%m-%d") HOW TO CONVERT TO REGULAR TIME
+
+
+#NAME AND PRICE EACH ITEM
+
+#TOTAL COST OF SHOPPING CART ITEMS
+
+#AMOUNT OF TAX OWED
+
+#TOTAL AMOUNT OWED
+
+#FRIENDLY MESSAGE SAYING THANK YOU. take into account order
+print ("Thank you for shopping! Please come again.")
 
 
 
