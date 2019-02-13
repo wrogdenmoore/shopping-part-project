@@ -40,16 +40,23 @@ while True:
     if selected_id == "DONE":
             break
     else:
-        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-        matching_product = matching_products[0] 
-        total_price = total_price + matching_product["price"]
-        print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
+        # matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        # matching_product = matching_products[0] 
+        # total_price = total_price + matching_product["price"]
+        # print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
+        selected_ids.append(selected_id)
 
 #first step
 # print(selected_id)
 # print(type(selected_id))
 
 #INFO DISPLAY/OUTPUT
+
+for selected_id in selected_ids:
+    matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+    matching_product = matching_products[0] #why is this zero--would it affect if you were to take out id#4?
+    total_price = total_price + matching_product["price"]
+    print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
 
 print("TOTAL PRICE: " + str(total_price))
 
