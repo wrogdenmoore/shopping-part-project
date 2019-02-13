@@ -52,13 +52,22 @@ while True:
 
 #INFO DISPLAY/OUTPUT
 
+
+
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
     matching_product = matching_products[0] #why is this zero--would it affect if you were to take out id#4?
     total_price = total_price + matching_product["price"]
     print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
 
-print("TOTAL PRICE: " + str(total_price))
+print("---------------------------------------------")
+tax_price = total_price * tax_rate
+final_price = total_price + tax_price
+print("SUBTOTAL: $" + str(total_price))
+print("TAX: $" + str(tax_price)) #calculate taX--HOW TO PUT IN THE 6% AS A MEASURE OF TOTAL. THEN ADD THE TAX TO SUBTOTAL
+print("TOTAL: $" + str(final_price))
+
+# previously used: print("TOTAL PRICE: " + str(total_price))
 
 
 
