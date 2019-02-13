@@ -51,12 +51,21 @@ while True:
 # print(type(selected_id))
 
 #INFO DISPLAY/OUTPUT
-
+import datetime
+t = datetime.datetime.now()
+print(t.strftime("%y-%m-%d"))
+print("---------------------------------------------")
+print("Welcome to the Jyve Grocery Store")
+print("www.jyve.grocerystore.com")
+print("---------------------------------------------")
+print("Checkout at :" + str(t)) #STILL NEED TO FORMAT****************
+print("---------------------------------------------")
+print(selected_ids)#******GET LIST OF PRODUCTS BELOW TO HAVE "SELECTED PRODUCTS" AND THEN ...+...+
 
 
 for selected_id in selected_ids:
     matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-    matching_product = matching_products[0] #why is this zero--would it affect if you were to take out id#4?
+    matching_product = matching_products[0]
     total_price = total_price + matching_product["price"]
     print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
 
