@@ -27,10 +27,18 @@ products = [
 
 #USER INPUTS
 
-selected_id=input("Please input a product identifier: ") #> "9" is string version
-matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
-matching_product = matching_products[0] 
-print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
+while True:
+
+    selected_id=input("Please input a product identifier: ") #> "9" is string version
+    #Create "DONE" option
+    if selected_id == "DONE":
+            break
+    else:
+        matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
+        matching_product = matching_products[0] 
+        print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
+
+
 
 #first step
 # print(selected_id)
