@@ -25,6 +25,12 @@ products = [
 
 # TODO: write some Python code here to produce the desired functionality...
 
+total_price = 0 
+
+tax_rate = .06
+
+selected_ids = []
+
 #USER INPUTS
 
 while True:
@@ -36,11 +42,17 @@ while True:
     else:
         matching_products = [p for p in products if str(p["id"]) == str(selected_id)]
         matching_product = matching_products[0] 
+        total_price = total_price + matching_product["price"]
         print("Selected product: " + matching_product["name"] + " " + str(matching_product["price"]))
-
-
 
 #first step
 # print(selected_id)
 # print(type(selected_id))
+
+#INFO DISPLAY/OUTPUT
+
+print("TOTAL PRICE: " + str(total_price))
+
+
+
 
