@@ -24,5 +24,10 @@ products = [
 ] # based on data from Instacart: https://www.instacart.com/datasets/grocery-shopping-2017
 
 # TODO: write some Python code here to produce the desired functionality...
-print(products)
+
+#USER INPUTS
+
+selected_id=input("Please input a product identifier: ") #> "9" is string version
+print(selected_id)
+print(type(selected_id))
 
